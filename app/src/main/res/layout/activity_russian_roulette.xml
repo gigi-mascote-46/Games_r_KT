@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Exibir o saldo -->
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo: $1000"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000"/>
+
+    <!-- Exibir o resultado do jogo -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo ao Jogo!"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FF0000"/>
+
+    <!-- Botão para girar o tambor -->
+    <Button
+        android:id="@+id/spinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Girar Tambor"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

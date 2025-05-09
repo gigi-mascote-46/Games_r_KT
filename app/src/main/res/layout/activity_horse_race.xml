@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutHorseRace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".HorseRaceActivity">
+
+    <!-- TextView para exibição do saldo -->
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo: €100"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <!-- EditText para inserir o valor da aposta -->
+    <EditText
+        android:id="@+id/etAposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor da aposta"
+        android:inputType="number"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para inserir o valor da aposta"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText para escolher o cavalo -->
+    <EditText
+        android:id="@+id/etCavalo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escolhe cavalo (1 a 3)"
+        android:inputType="number"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para escolher o cavalo (1 a 3)"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botão para correr a corrida -->
+    <Button
+        android:id="@+id/btnCorrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correr Corrida"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Botão para iniciar a corrida" />
+
+</LinearLayout>

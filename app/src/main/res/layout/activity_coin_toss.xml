@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCoinToss"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".CoinTossActivity">
+
+    <!-- TextView para o saldo -->
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo: €100"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText para inserir o valor da aposta -->
+    <EditText
+        android:id="@+id/etAposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor da aposta"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RadioGroup para escolher Cara ou Coroa -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbCara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cara"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbCoroa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coroa"
+            android:layout_marginStart="24dp" />
+    </RadioGroup>
+
+    <!-- Botão para lançar a moeda -->
+    <Button
+        android:id="@+id/btnLancar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lançar Moeda" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDiceRoll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".DiceRollActivity">
+
+    <!-- TextView para o saldo com atualização dinâmica -->
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo: €100"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <!-- EditText para inserir o valor da aposta -->
+    <EditText
+        android:id="@+id/etAposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor da aposta"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para inserir o valor da aposta" />
+
+    <!-- EditText para escolher o número -->
+    <EditText
+        android:id="@+id/etNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escolhe um número (1-6)"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para escolher o número do dado (1 a 6)" />
+
+    <!-- Botão para lançar o dado -->
+    <Button
+        android:id="@+id/btnLancar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lançar Dado"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Botão para lançar o dado"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
