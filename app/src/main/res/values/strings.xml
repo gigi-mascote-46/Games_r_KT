@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Games</string>
+    <string-array name="jogos_array">
+        <item>Coin Toss</item>
+        <item>Horse Race</item>
+        <item>Dice Roll</item>
+        <item>Russian Roulette</item>
+    </string-array>
 </resources>

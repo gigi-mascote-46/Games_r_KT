@@ -36,6 +36,11 @@ class DiceRollActivity : AppCompatActivity() {
             val dice2 = Random.nextInt(1, 7)
             val total = dice1 + dice2
 
+            // Animar os dados antes de mostrar os resultados
+            val shake = AnimationUtils.loadAnimation(this, R.anim.shake)
+            binding.imageDice1.startAnimation(shake)
+            binding.imageDice2.startAnimation(shake)
+
             // Mostrar os dados
             binding.imageDice1.setImageResource(diceImages[dice1 - 1])
             binding.imageDice2.setImageResource(diceImages[dice2 - 1])

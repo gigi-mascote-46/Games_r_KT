@@ -1,9 +1,10 @@
-package com.example.gamemachine
+package com.example.games
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamemachine.databinding.ActivityRussianRouletteBinding
+import com.example.games.databinding.ActivityRussianRouletteBinding
 import kotlin.random.Random
 
 class RussianRouletteActivity : AppCompatActivity() {

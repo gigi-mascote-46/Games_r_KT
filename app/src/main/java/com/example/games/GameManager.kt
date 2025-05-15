@@ -1,7 +1,7 @@
-package com.example.gamemachine
+package com.example.games
 
 object GameManager {
-    var balance: Int = 100
+    var balance: Int = 1000
 
     fun addBalance(amount: Int) {
         balance += amount

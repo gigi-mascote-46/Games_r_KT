@@ -1,58 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutCoinToss"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_coin_toss"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".CoinTossActivity">
+    android:layout_height="match_parent">
 
-    <!-- TextView para o saldo -->
-    <TextView
-        android:id="@+id/tvSaldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saldo: €100"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
-
-    <!-- EditText para inserir o valor da aposta -->
-    <EditText
-        android:id="@+id/etAposta"
+    <!-- Imagem de fundo -->
+    <ImageView
+        android:id="@+id/bgImageCoinToss"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Valor da aposta"
-        android:inputType="number"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cointoss"
+        android:contentDescription="Imagem de fundo para Coin Toss"
+        android:alpha="0.3" />
 
-    <!-- RadioGroup para escolher Cara ou Coroa -->
-    <RadioGroup
+    <!-- Conteúdo principal -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
 
-        <RadioButton
-            android:id="@+id/rbCara"
+        <TextView
+            android:id="@+id/textBalance"
+            android:layout_width="match_parent"
+            android:layout_height="559dp"
+            android:layout_marginBottom="32dp"
+            android:text="Saldo: 1000 moedas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cara"
-            android:checked="true" />
+            android:layout_marginBottom="32dp"
+            android:padding="16dp"
+            android:text="Lançar Moeda"
+            android:textSize="18sp" />
 
-        <RadioButton
-            android:id="@+id/rbCoroa"
+        <TextView
+            android:id="@+id/textResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coroa"
-            android:layout_marginStart="24dp" />
-    </RadioGroup>
-
-    <!-- Botão para lançar a moeda -->
-    <Button
-        android:id="@+id/btnLancar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lançar Moeda" />
-
-</LinearLayout>
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="22sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+</RelativeLayout>

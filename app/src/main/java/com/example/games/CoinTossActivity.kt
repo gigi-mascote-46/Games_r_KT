@@ -1,4 +1,4 @@
-package com.example.gamemachine
+package com.example.games
 
 import android.os.Bundle
 import android.widget.Toast
@@ -17,6 +17,14 @@ class CoinTossActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         updateBalanceDisplay()
+
+        binding.btnCarregarSaldo.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Carregar Saldo")
+                .setMessage("Use esta referência multibanco fictícia:\n\nEntidade: 12345\nReferência: 999 888 777\nValor: à sua escolha")
+                .setPositiveButton("OK", null)
+                .show()
+        }
 
         binding.buttonBet.setOnClickListener {
             val result = if (Random.nextBoolean()) "Cara" else "Coroa"
@@ -39,6 +47,6 @@ class CoinTossActivity : AppCompatActivity() {
     }
 
     private fun updateBalanceDisplay() {
-        binding.textBalance.text = "Saldo: ${GameManager.balance} moedas"
+        binding.textSaldo.text = "€${GameManager.balance}"
     }
 }

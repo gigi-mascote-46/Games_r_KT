@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroundLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Exibir o saldo -->
-    <TextView
-        android:id="@+id/balanceTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saldo: $1000"
-        android:textSize="18sp"
-        android:layout_marginBottom="20dp"
-        android:textColor="#000"/>
+    <!-- Imagem de fundo -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/russianroulette"
+        android:contentDescription="Imagem de fundo russian roulette"
+        android:alpha="0.3" />
 
-    <!-- Exibir o resultado do jogo -->
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bem-vindo ao Jogo!"
-        android:textSize="24sp"
-        android:layout_marginBottom="20dp"
-        android:textColor="#FF0000"/>
+    <!-- Conteúdo principal sobreposto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <!-- Botão para girar o tambor -->
-    <Button
-        android:id="@+id/spinButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Girar Tambor"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="368dp"
+            android:layout_marginBottom="30dp"
+            android:baselineAligned="false"
+            android:text="Saldo: €1000"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="213dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="20dp"
+            android:text="Vamos começar!"
+            android:textColor="#FF4444"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/spinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A girar!"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>
