@@ -5,4 +5,11 @@
         <item>Dice Roll</item>
         <item>Russian Roulette</item>
     </string-array>
+    <string name="app_name">Arrisca+</string>
+    <string name="todo">TODO</string>
+    <string name="username">Username</string>
+    <string name="arrisca">Arrisca+</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="registar">Registar</string>
 </resources>

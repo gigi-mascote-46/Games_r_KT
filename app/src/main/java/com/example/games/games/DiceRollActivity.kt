@@ -1,14 +1,16 @@
-package com.example.games
+package com.example.games.games
 
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.games.databinding.ActivityDicerollBinding
+import com.example.games.databinding.ActivityDiceRollBinding
+import com.example.games.R
 import kotlin.random.Random
 
 class DiceRollActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDicerollBinding
+    private lateinit var binding: ActivityDiceRollBinding
     private val betAmount = 100
     private val diceImages = listOf(
         R.drawable.dice_1,
@@ -21,7 +23,7 @@ class DiceRollActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDicerollBinding.inflate(layoutInflater)
+        binding = ActivityDiceRollBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         updateBalanceDisplay()
@@ -32,8 +34,8 @@ class DiceRollActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val dice1 = Random.nextInt(1, 7)
-            val dice2 = Random.nextInt(1, 7)
+            val dice1 = Random.Default.nextInt(1, 7)
+            val dice2 = Random.Default.nextInt(1, 7)
             val total = dice1 + dice2
 
             // Animar os dados antes de mostrar os resultados

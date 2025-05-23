@@ -1,8 +1,13 @@
+package com.example.games.games
+
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.games.GameManager
 import com.example.games.databinding.ActivityHorseRaceBinding
+import com.example.games.games.GameManager
+import kotlin.random.Random
 
 class HorseRaceActivity : AppCompatActivity() {
 
@@ -69,7 +74,7 @@ class HorseRaceActivity : AppCompatActivity() {
                     val winnerHorse = winnerIndex + 1
                     val message = if (selectedHorse == winnerHorse) {
                         GameManager.addBalance(betAmount * 3)
-                        "🏆 O cavalo $winnerHorse venceu! Ganhaste ${betAmount * 3}!"
+                        "🏆 O cavalo $winnerHorse venceu! Ganhaste €${betAmount * 3}!"
                     } else {
                         "💔 O cavalo $winnerHorse venceu. Perdeste!"
                     }
@@ -86,6 +91,7 @@ class HorseRaceActivity : AppCompatActivity() {
     }
 
     private fun updateBalanceDisplay() {
-        binding.tvSaldo.text = "Saldo: €${GameManager.balance}"
+        // Corrigido para o ID correto do TextView no XML (textSaldo)
+        binding.textSaldo.text = "Saldo: €${GameManager.balance}"
     }
 }

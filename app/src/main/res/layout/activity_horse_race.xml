@@ -3,84 +3,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:background="#FFFFFF">
+    android:background="@drawable/background_horse_race">  <!-- imagem aqui -->
 
-    <LinearLayout
+
+
+    <!-- Único filho do ScrollView -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tvSaldo"
+
+        <!-- Botão de carregar saldo -->
+
+        <LinearLayout
+            android:id="@+id/saldoLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Saldo: €0"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
 
-        <EditText
-            android:id="@+id/etAposta"
+            <TextView
+                android:id="@+id/textSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€1000"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/btnCarregarSaldo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_coin"
+                android:contentDescription="Carregar Saldo" />
+        </LinearLayout>
+
+        <!-- Conteúdo principal -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor da Aposta"
-            android:inputType="number"
-            android:layout_marginBottom="16dp" />
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/saldoLayout"
+            android:layout_marginTop="16dp">
 
-        <EditText
-            android:id="@+id/etCavalo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Escolhe um cavalo (1-3)"
-            android:inputType="number"
-            android:layout_marginBottom="24dp" />
+            <EditText
+                android:id="@+id/etAposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Valor da Aposta"
+                android:inputType="number"
+                android:minHeight="48dp" />
 
-        <Button
-            android:id="@+id/btnCorrer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Correr!"
-            android:textSize="18sp"
-            android:padding="12dp"
-            android:layout_marginBottom="24dp" />
+            <EditText
+                android:id="@+id/etCavalo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Escolhe um cavalo (1-3)"
+                android:inputType="number"
+                android:minHeight="48dp" />
 
-        <!-- Corrida com progress bars -->
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cavalo 1" />
+            <Button
+                android:id="@+id/btnCorrer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correr!"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp" />
 
-        <ProgressBar
-            android:id="@+id/pbHorse1"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cavalo 1" />
 
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cavalo 2" />
+            <ProgressBar
+                android:id="@+id/pbHorse1"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0" />
 
-        <ProgressBar
-            android:id="@+id/pbHorse2"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cavalo 2" />
 
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cavalo 3" />
+            <ProgressBar
+                android:id="@+id/pbHorse2"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0" />
 
-        <ProgressBar
-            android:id="@+id/pbHorse3"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cavalo 3" />
 
-    </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pbHorse3"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </ScrollView>

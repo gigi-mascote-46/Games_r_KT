@@ -13,12 +13,17 @@
         android:theme="@style/Theme.Games"
         tools:targetApi="31">
 
-        <activity android:name=".SplashScreenActivity">
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.LoginActivity"
+            android:exported="false" />
 
+    </application>
 </manifest>

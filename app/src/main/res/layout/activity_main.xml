@@ -6,9 +6,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/background_main"
+        android:alpha="0.4"
         android:scaleType="centerCrop"
-        android:alpha="0.4" />
+        android:src="@drawable/background_main" />
 
     <LinearLayout
         android:id="@+id/saldoLayout"
@@ -38,26 +38,28 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@id/saldoLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="431dp"
+        android:layout_below="@id/saldoLayout"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:baselineAligned="false"
             android:text="Escolha o seu jogo"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:textAlignment="viewStart"
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerJogos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btnComecar"

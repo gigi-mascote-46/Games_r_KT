@@ -1,4 +1,4 @@
-package com.example.games
+package com.example.games.games
 
 object GameManager {
     var balance: Int = 1000

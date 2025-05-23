@@ -10,44 +10,75 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/cointoss"
+        android:src="@drawable/bakground_coin_toss"
         android:contentDescription="Imagem de fundo para Coin Toss"
         android:alpha="0.3" />
 
-    <!-- Conteúdo principal -->
+    <!-- Botão de carregar saldo -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp">
+        android:id="@+id/saldoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
 
         <TextView
-            android:id="@+id/textBalance"
-            android:layout_width="match_parent"
-            android:layout_height="559dp"
-            android:layout_marginBottom="32dp"
-            android:text="Saldo: 1000 moedas"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/buttonBet"
+            android:id="@+id/textSaldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:padding="16dp"
-            android:text="Lançar Moeda"
-            android:textSize="18sp" />
+            android:text="€1000"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
 
-        <TextView
-            android:id="@+id/textResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#333333"
-            android:textSize="22sp"
-            android:textStyle="italic" />
+        <ImageView
+            android:id="@+id/btnCarregarSaldo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_coin"
+            android:contentDescription="Carregar Saldo" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/saldoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <!-- Conteúdo principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="687dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <Button
+                android:id="@+id/buttonBet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:text="Lançar Moeda"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

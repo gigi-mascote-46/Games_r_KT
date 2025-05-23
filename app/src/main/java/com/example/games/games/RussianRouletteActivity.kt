@@ -1,9 +1,8 @@
-package com.example.games
+package com.example.games.games
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gamemachine.databinding.ActivityRussianRouletteBinding
 import com.example.games.databinding.ActivityRussianRouletteBinding
 import kotlin.random.Random
 
@@ -32,8 +31,8 @@ class RussianRouletteActivity : AppCompatActivity() {
 
     // Função que simula o giro do tambor e o jogo
     private fun spinWheel() {
-        val bulletPosition = Random.nextInt(1, 7)  // Posicionamento de 1 a 6
-        val playerPick = Random.nextInt(1, 7)  // O jogador escolhe um número entre 1 e 6
+        val bulletPosition = Random.Default.nextInt(1, 7)  // Posicionamento de 1 a 6
+        val playerPick = Random.Default.nextInt(1, 7)  // O jogador escolhe um número entre 1 e 6
 
         // Verifica se o jogador "acertou" (ou seja, se a bala estava na posição sorteada)
         if (bulletPosition == playerPick) {

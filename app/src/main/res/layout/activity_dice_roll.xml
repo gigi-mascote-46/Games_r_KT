@@ -11,7 +11,35 @@
         android:alpha="0.3"
         android:contentDescription="Imagem de fundo para o jogo dos dados"
         android:scaleType="centerCrop"
-        android:src="@drawable/diceroll" />
+        android:src="@drawable/background_dice_roll" />
+
+    <!-- Botão de carregar saldo -->
+    <LinearLayout
+        android:id="@+id/saldoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€1000"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/btnCarregarSaldo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_coin"
+            android:contentDescription="Carregar Saldo" />
+    </LinearLayout>
 
     <!-- Conteúdo principal -->
     <LinearLayout
@@ -60,14 +88,5 @@
             android:textSize="22sp"
             android:textStyle="italic" />
 
-        <TextView
-            android:id="@+id/textBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="162dp"
-            android:layout_marginBottom="24dp"
-            android:text="Saldo: 0 moedas"
-            android:textColor="#E69090"
-            android:textSize="24sp"
-            android:textStyle="bold|italic" />
     </LinearLayout>
 </RelativeLayout>
